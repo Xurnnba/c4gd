@@ -9,6 +9,11 @@ public class PopOutMessage : MonoBehaviour
 
     public TextMeshProUGUI text;
     public static PopOutMessage pO;
+
+    private void Start()
+    {
+        pO = this;
+    }
     public void ShowMessage()
     {
         text.gameObject.SetActive(true);
