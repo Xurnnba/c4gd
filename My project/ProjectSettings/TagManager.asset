@@ -4,9 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Coin
   - Floor
   - BlackTile
+=======
+  - Obstacle
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
