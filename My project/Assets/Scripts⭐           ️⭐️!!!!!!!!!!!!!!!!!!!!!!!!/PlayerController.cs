@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody playerRb;
     bool isOnGround = true;
     bool isOnBlackTile = false;
+    bool isOnPurpleTile = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +20,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (isOnBlackTile)
+        
+        if (isOnBlackTile && !isOnPurpleTile)
         {
-            transform.Translate(Vector3.left * Time.deltaTime * BlackTile.bT.returnSpeed());
+
+            transform.Translate(Vector3.left * Time.deltaTime * BlackTile.bT.returnSpeed());//,Space.World);
+            //playerRb.velocity = Vector3.left * BlackTile.bT.returnSpeed();
         }
         if (Input.GetKey(KeyCode.A)){
-            transform.Translate(-Vector3.forward * Time.deltaTime * leftOrRightSpeed);
+            transform.Translate(-Vector3.forward * Time.deltaTime * leftOrRightSpeed);//,Space.World);
         }
         if (Input.GetKey(KeyCode.D)){
-            transform.Translate(Vector3.forward * Time.deltaTime * leftOrRightSpeed);
+            transform.Translate(Vector3.forward * Time.deltaTime * leftOrRightSpeed);//,Space.World);
         }
         if (Input.GetKeyDown(KeyCode.Space)&&isOnGround)
         {
@@ -50,8 +53,19 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
             isOnBlackTile = true;
         }
-        
+        if (collision.gameObject.CompareTag("PurpleTile"))
+        {
+            isOnPurpleTile = true;
+        }
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("PurpleTile"))
+        {
+            isOnPurpleTile = false;
+        }
+        
+    }
 
 }
