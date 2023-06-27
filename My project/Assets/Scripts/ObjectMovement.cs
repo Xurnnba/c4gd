@@ -9,7 +9,7 @@ public class ObjectMovement : MonoBehaviour
 
     private bool movingRight = true;
     private Vector3 initialPosition;
-
+    
     private void Start()
     {
         // Store the initial position of the object
@@ -24,7 +24,7 @@ public class ObjectMovement : MonoBehaviour
         while (true) // Continue indefinitely
         {
             // Calculate the target position based on the current direction
-            Vector3 targetPosition = movingRight ? initialPosition + Vector3.right * movementRange : initialPosition + Vector3.left * movementRange;
+            Vector3 targetPosition = movingRight ? initialPosition + Vector3.forward * movementRange : initialPosition - Vector3.forward * movementRange;
 
 
             // Move towards the target position
