@@ -18,6 +18,7 @@ public class PlayerControllerV2 : MonoBehaviour
     bool isOnBlackTile = false;
     bool isOnPurpleTile = false;
     bool isOnBlueTile = false;
+    bool isOnWhiteTile = false;
     private Vector3 stillRotation = new Vector3(0, 0, 0);
 
     public float normalForwardSpeed = 10;
