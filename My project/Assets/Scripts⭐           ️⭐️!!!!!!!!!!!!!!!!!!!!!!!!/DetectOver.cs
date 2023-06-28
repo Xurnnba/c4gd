@@ -7,7 +7,7 @@ public class DetectOver : MonoBehaviour
 
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         PopOutMessage.pO.ShowMessage();
     }

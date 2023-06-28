@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class EndGameWhenCollide : MonoBehaviour
+public class WallRunningTile : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,7 +18,6 @@ public class EndGameWhenCollide : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
-
 }
