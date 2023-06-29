@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectMovement : MonoBehaviour
+public class ObjectMovement2 : MonoBehaviour
 {
     public float speed = 5f;
     public float movementRange = 5f;
@@ -16,15 +16,15 @@ public class ObjectMovement : MonoBehaviour
         initialPosition = transform.position;
 
         // Start the coroutine to move the object
-        StartCoroutine(MoveObject());
+        StartCoroutine(MoveObject2());
     }
 
-    private IEnumerator MoveObject()
+    private IEnumerator MoveObject2()
     {
         while (true) // Continue indefinitely
         {
             // Calculate the target position based on the current direction
-            Vector3 targetPosition = movingRight ? initialPosition + Vector3.right * movementRange : initialPosition + Vector3.left * movementRange;
+            Vector3 targetPosition = movingRight ? initialPosition + Vector3.forward * movementRange : initialPosition - Vector3.forward * movementRange;
 
 
             // Move towards the target position
