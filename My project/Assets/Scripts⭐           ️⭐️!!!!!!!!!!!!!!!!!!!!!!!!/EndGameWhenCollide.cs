@@ -17,9 +17,9 @@ public class EndGameWhenCollide : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+   // private void OnCollisionEnter(Collision collision)
+  //  {
+       // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+  //  }
 
 }
