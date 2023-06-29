@@ -27,13 +27,14 @@ public class PlayerControllerV2 : MonoBehaviour
     bool theBlueTileCollision = true;
 
     MeshRenderer meshRenderer;
-    //Material oldMaterial;
+    public ParticleSystem explosionParticle;
     [Header("Materials")]
     public Material Black;
     public Material Orange;
     public Material Purple;
     public Material Blue;
     public Material White;
+    Material[] materials = new Material[5];
 
     // Start is called before the first frame update
     void Start()
@@ -41,12 +42,15 @@ public class PlayerControllerV2 : MonoBehaviour
         Physics.gravity = new Vector3(0, -9.8f * gravityModifier, 0);
         isOnGround = true;
         isOnBlackTile = true;
-        //isOnPurpleTile = false;
         isOnBlueTile = false;
         isOnWhiteTile = false;
         meshRenderer = GetComponent<MeshRenderer>();
-        //oldMaterial = meshRenderer.material;
-        
+        materials[0] = Black;
+        materials[1] = Orange;
+        materials[2] = Purple;
+        materials[3] = Blue;
+        materials[4] = White;
+
     }
 
     // Update is called once per frame
@@ -119,31 +123,9 @@ public class PlayerControllerV2 : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            meshRenderer.material = Black;
-            //if (meshRenderer.material == Orange)
-            //{
-                
-            //}
-            //if (meshRenderer.material == Black)
-            //{
-            //    meshRenderer.material = Purple;
-            //}
-            //if (meshRenderer.material == Purple)
-            //{
-            //    meshRenderer.material = Blue;
-            //}
-            //if (meshRenderer.material == Blue)
-            //{
-            //    meshRenderer.material = White;
-            //}
-            //if (meshRenderer.material == White)
-            //{
-            //    meshRenderer.material = Orange;
-            //}
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            meshRenderer.material = materials[Random.Range(0, 4)];
 
-            //    = materials.Dequeue();
-            //materials.Enqueue(oldMaterial);
-            //oldMaterial = meshRenderer.material;
         }
     }
 
@@ -168,10 +150,7 @@ public class PlayerControllerV2 : MonoBehaviour
             blueTilePos =  gameObject.transform.position;//1234141343414
             theBlueTileCollision = false;
         }
-        //if (collision.gameObject.CompareTag("BlueTile") )
-        //{
-        //    isOnBlueTile = true;
-        //}
+       
     }
 
     private void OnCollisionExit(Collision collision)

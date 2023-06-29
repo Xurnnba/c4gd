@@ -8,6 +8,7 @@ public class UserInteraction : MonoBehaviour
     
     public void PlayGame()
     {
-      SceneManager.LoadSceneAsync(1);
+      SceneManager.LoadScene("ColeHuang");
+        Time.timeScale = 1;
     }
 }

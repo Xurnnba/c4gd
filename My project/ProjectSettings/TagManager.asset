@@ -45,3 +45,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Flower
+    uniqueID: 3909087739
+    locked: 0

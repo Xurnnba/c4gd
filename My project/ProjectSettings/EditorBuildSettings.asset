@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 9a9a899f0c0ea4d41a8c15f1a604880e
   - enabled: 1
+    path: Assets/Scenes/ColeHuang.unity
+    guid: 644db7e4282284c41b6060285beb3f04
+  - enabled: 1
     path: Assets/Scenes/SriniCopy.unity
     guid: af074da397a6617438f164d98be2966b
   m_configObjects: {}
