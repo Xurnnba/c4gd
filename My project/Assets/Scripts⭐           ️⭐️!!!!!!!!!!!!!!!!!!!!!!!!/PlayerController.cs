@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     [Header("Basic Parameters")]
     public float leftOrRightSpeed = 1;
     public float jumpForce = 15f;
-    float velocity;
-    float jumpHeight = 5;
     public float gravityModifier = 3f;
     public GameObject platformPosition;
 

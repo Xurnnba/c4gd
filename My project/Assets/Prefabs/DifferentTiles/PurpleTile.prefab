@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7669526474081671798}
   - component: {fileID: 2104321886317522087}
   - component: {fileID: 5557469608301121446}
-  - component: {fileID: 5498037853411108350}
   m_Layer: 0
   m_Name: PurpleTile
   m_TagString: PurpleTile
@@ -111,15 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8828f9824eb3d4aaab6b18d879610330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5498037853411108350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198727415558027400}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8828f9824eb3d4aaab6b18d879610330, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  gameOVerText: {fileID: 0}
+  restart: {fileID: 0}

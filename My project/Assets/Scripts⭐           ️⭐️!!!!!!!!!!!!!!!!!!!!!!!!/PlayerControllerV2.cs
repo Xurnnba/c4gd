@@ -9,7 +9,9 @@ public class PlayerControllerV2 : MonoBehaviour
     [Header("Basic Parameters")]
     public float leftOrRightSpeed = 1;
     public float jumpForce = 15f;
+
     
+
     //float jumpHeight = 5;
     public float gravityModifier = 3f;
     public GameObject platformPosition;
@@ -150,7 +152,7 @@ public class PlayerControllerV2 : MonoBehaviour
             blueTilePos =  gameObject.transform.position;//1234141343414
             theBlueTileCollision = false;
         }
-       
+        
     }
 
     private void OnCollisionExit(Collision collision)
